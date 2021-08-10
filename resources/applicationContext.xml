@@ -8,8 +8,11 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="myPet"
-          class="com.alexDyuba.spring.Cat">
-
+          class="com.alexDyuba.spring.Dog">
     </bean>
 
+    <bean id="myPerson"
+          class="com.alexDyuba.spring.Person">
+        <constructor-arg ref="myPet"/>
+    </bean>
 </beans>
