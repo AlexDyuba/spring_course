@@ -13,6 +13,6 @@
 
     <bean id="myPerson"
           class="com.alexDyuba.spring.Person">
-        <constructor-arg ref="myPet"/>
+        <property name="pet" ref="myPet"/>
     </bean>
 </beans>
