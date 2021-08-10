@@ -8,6 +8,8 @@ public class TestPet {
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         Person person = context.getBean("myPerson", Person.class);
         person.callYourPet();
+        System.out.println(person.getAge());
+        System.out.println(person.getSurname());
         context.close();
     }
 }
