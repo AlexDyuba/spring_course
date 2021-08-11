@@ -22,5 +22,5 @@ two main
 
 @PreDestroy - a method annotated with @PreDestroy runs only once, just before Spring removes our bean from the application context.
 
-Note that both @PostConstruct and @PreDestroy annotations are part of Java EE. And since Java EE has been deprecated in Java 9 and removed in Java 11 we have to add an additional dependency to use these annotations:
+- Note that both @PostConstruct and @PreDestroy annotations are part of Java EE. And since Java EE has been deprecated in Java 9 and removed in Java 11 we have to add an additional dependency to use these annotations:
 
