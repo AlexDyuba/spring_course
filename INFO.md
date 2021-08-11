@@ -8,3 +8,12 @@ Bean - it is nothing more than the most common object. The only difference is th
 @Qualifier - by using the @Qualifier annotation, we can eliminate the issue of which bean needs to be injected.
 
 @Value - This annotation can be used for injecting values into fields in Spring-managed beans, and it can be applied at the field or constructor/method parameter level.
+
+@Scope
+
+two main 
+
+- Singleton - When we define a bean with the singleton scope, the container creates a single instance of that bean; all requests for that bean name will return the same object, which is cached. Any modifications to the object will be reflected in all references to the bean. This scope is the default value if no other scope is specified.
+
+
+- Prototype - A bean with the prototype scope will return a different instance every time it is requested from the container. It is defined by setting the value prototype to the @Scope annotation in the bean definition:
