@@ -6,3 +6,5 @@ Bean - it is nothing more than the most common object. The only difference is th
 @Autowired - The Spring framework enables automatic dependency injection. In other words, by declaring all the bean dependencies in a Spring configuration file, Spring container can autowire relationships between collaborating beans. This is called Spring bean autowiring.
 
 @Qualifier - by using the @Qualifier annotation, we can eliminate the issue of which bean needs to be injected.
+
+@Value - This annotation can be used for injecting values into fields in Spring-managed beans, and it can be applied at the field or constructor/method parameter level.
