@@ -26,6 +26,6 @@ two main
 
 @Configuration/@ComponentScan - we use the @ComponentScan annotation along with the @Configuration annotation to specify the packages that we want to be scanned. @ComponentScan without arguments tells Spring to scan the current package and all of its sub-packages.
 
-@Bean - 
+@Bean - to declare a bean, simply annotate a method with the @Bean annotation. When JavaConfig encounters such a method, it will execute that method and register the return value as a bean within a BeanFactory.
 
-@PropertySource - 
+@PropertySource - annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment.
