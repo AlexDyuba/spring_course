@@ -1,7 +1,18 @@
-# Terms
+# Terms/theory
 Bean - it is nothing more than the most common object. The only difference is that beans are usually called those objects that are managed by Spring and live inside its DI container.
 
 Joinpoint - 
+
+In Spring AOP, 4 type of advices are supported :
+
+- Before advice – Run before the method execution
+
+- After returning advice – Run after the method returns a result
+
+- After throwing advice – Run after the method throws an exception
+
+- Around advice – Run around the method execution, combine all three advices above.
+
 # Annotation
 @Component - is an annotation that allows Spring to automatically detect our custom beans.
 
@@ -39,3 +50,5 @@ two main
 @EnableAspectJAutoProxy -
 
 @Order - 
+
+@AfterReturning - 
