@@ -29,3 +29,11 @@ two main
 @Bean - to declare a bean, simply annotate a method with the @Bean annotation. When JavaConfig encounters such a method, it will execute that method and register the return value as a bean within a BeanFactory.
 
 @PropertySource - annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment.
+
+@Aspect -
+
+@Pointcut -
+
+@EnableAspectJAutoProxy -
+
+@Order - 
