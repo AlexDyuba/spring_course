@@ -1,7 +1,7 @@
 # Terms/theory
 Bean - it is nothing more than the most common object. The only difference is that beans are usually called those objects that are managed by Spring and live inside its DI container.
 
-Joinpoint - 
+Joinpoint - is a point during the execution of a program, such as execution of a method or the handling of an exception.
 
 In Spring AOP, 4 type of advices are supported :
 
@@ -43,12 +43,15 @@ two main
 
 @PropertySource - annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment.
 
-@Aspect -
+@Aspect - is a modularization of a concern that cuts across multiple classes. Unified logging can be an example of such cross-cutting concern
 
-@Pointcut -
+@Pointcut - is a predicate that helps match an Advice to be applied by an Aspect at a particular JoinPoint.
+The Advice is often associated with a Pointcut expression and runs at any Joinpoint matched by the Pointcut.
 
 @EnableAspectJAutoProxy -
 
-@Order - 
+@Order - the @Order annotation defines the sorting order of an annotated component or bean.
 
 @AfterReturning - 
+
+@Around - 
