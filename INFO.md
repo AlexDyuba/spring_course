@@ -11,9 +11,7 @@ In Spring AOP, 4 type of advices are supported :
 
 - After throwing advice – Run after the method throws an exception
 
-- Around advice – Run around the method execution, combine all three advices above.
-
-Entity class - 
+- Around advice – Run around the method execution, combine all three advices above. 
 
 # Annotation
 @Component - is an annotation that allows Spring to automatically detect our custom beans.
@@ -59,4 +57,22 @@ The Advice is often associated with a Pointcut expression and runs at any Joinpo
 @Around - 
 
 # Hibernate
+
+== Theory
+
+Entity class - 
+
+SessionFactory - 
+
+Session -
+
+== Annotation
+
+@Entity - 
+
+@Table - 
+
+@Column - 
+
+@Id - 
 
