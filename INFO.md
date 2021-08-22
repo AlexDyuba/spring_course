@@ -13,6 +13,8 @@ In Spring AOP, 4 type of advices are supported :
 
 - Around advice – Run around the method execution, combine all three advices above.
 
+Entity class - 
+
 # Annotation
 @Component - is an annotation that allows Spring to automatically detect our custom beans.
 
