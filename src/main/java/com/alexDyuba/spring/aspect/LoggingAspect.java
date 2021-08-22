@@ -23,7 +23,7 @@ public class LoggingAspect {
         System.out.println("hi hi it is combo pointcut");
         System.out.println("getDeclaringType: = " + signature.getDeclaringType());
         System.out.println("getName: = " + signature.getName());
-        System.out.println("getClass = " + signature.getClass());
+        System.out.println("getClass: = " + signature.getClass());
         if (signature.getName().equals("addBook")) {
             for (Object i : info) {
                 if (i instanceof Book) {
