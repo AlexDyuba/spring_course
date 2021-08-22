@@ -1,6 +1,6 @@
 package com.alexDyuba.spring.aspect;
 
-import com.alexDyuba.spring.Book;
+import com.alexDyuba.spring.aop.Book;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Aspect;
