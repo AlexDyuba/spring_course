@@ -76,3 +76,15 @@ Session -
 
 @Id - 
 
+@GeneratedValue -
+
+#### strategy
+
+- GenerationType.AUTO - 
+
+- GenerationType.IDENTITY - 
+
+- GenerationType.SEQUENCE - 
+
+- GenerationType.TABLE - 
+
