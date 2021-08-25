@@ -10,7 +10,7 @@ public class Session {
                 .addAnnotatedClass(Employee.class)
                 .buildSessionFactory()) {
             org.hibernate.Session session = sessionFactory.getCurrentSession();
-            Employee employee = new Employee("Alex", "Dyuba", "IT", 2500);
+            Employee employee = new Employee("Glev", "Smirny", "HR", 1825);
             session.beginTransaction();
             session.save(employee);
             session.getTransaction().commit();
