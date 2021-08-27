@@ -1,6 +1,6 @@
-package com.alexDyuba.spring.hibernate;
+package com.alexDyuba.spring.hibernate.basics;
 
-import com.alexDyuba.spring.hibernate.entity.Employee;
+import com.alexDyuba.spring.hibernate.basics.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -12,12 +12,12 @@ public class textDelete {
 
         try (SessionFactory sessionFactory = new Configuration()
                 .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Employee.class)
+                .addAnnotatedClass(com.alexDyuba.spring.hibernate.basics.entity.Employee.class)
                 .buildSessionFactory()) {
             Session session = sessionFactory.getCurrentSession();
             session.beginTransaction();
-            List<Employee> employeeList = session.createQuery("from Employee ").getResultList();
-            for (Employee i : employeeList) {
+            List<com.alexDyuba.spring.hibernate.basics.entity.Employee> employeeList = session.createQuery("from Employee ").getResultList();
+            for (com.alexDyuba.spring.hibernate.basics.entity.Employee i : employeeList) {
                 System.out.println(i);
             }
             session.createQuery("delete Employee where name = 'Glev'").executeUpdate();
@@ -25,7 +25,7 @@ public class textDelete {
             session = sessionFactory.getCurrentSession();
             session.beginTransaction();
             employeeList = session.createQuery("from Employee ").getResultList();
-            for (Employee i : employeeList) {
+            for (com.alexDyuba.spring.hibernate.basics.entity.Employee i : employeeList) {
                 System.out.println(i);
             }
         }

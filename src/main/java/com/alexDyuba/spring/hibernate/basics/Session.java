@@ -1,5 +1,5 @@
-package com.alexDyuba.spring.hibernate;
-import com.alexDyuba.spring.hibernate.entity.Employee;
+package com.alexDyuba.spring.hibernate.basics;
+import com.alexDyuba.spring.hibernate.basics.entity.Employee;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

@@ -1,4 +1,4 @@
-package com.alexDyuba.spring.hibernate.entity;
+package com.alexDyuba.spring.hibernate.basics.entity;
 
 import javax.persistence.*;
 
