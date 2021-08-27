@@ -13,6 +13,7 @@ public class Session {
                 .buildSessionFactory()) {
             org.hibernate.Session session = sessionFactory.getCurrentSession();
             session.beginTransaction();
+            session.save(new Employee("Andrew", "Dorogoy", "Engineer", 2200));
             List<Employee> employeeList = session.createQuery("from Employee")
                     .getResultList();
 
@@ -21,7 +22,6 @@ public class Session {
             }
 
             session.getTransaction().commit();
-            sessionFactory.close();
         }
     }
 }
