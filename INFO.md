@@ -48,7 +48,7 @@ two main
 @Pointcut - is a predicate that helps match an Advice to be applied by an Aspect at a particular JoinPoint.
 The Advice is often associated with a Pointcut expression and runs at any Joinpoint matched by the Pointcut.
 
-@EnableAspectJAutoProxy -
+@EnableAspectJAutoProxy - 
 
 @Order - the @Order annotation defines the sorting order of an annotated component or bean.
 
@@ -60,31 +60,52 @@ The Advice is often associated with a Pointcut expression and runs at any Joinpo
 
 ### Theory
 
-Entity class - 
+Entity class - A JPA entity class is a POJO (Plain Old Java Object) class, i.e. an ordinary Java class that is marked (annotated) as having the ability to represent objects in the database. 
 
-SessionFactory - 
+SessionFactory - SessionFactory is an interface. SessionFactory can be created by providing Configuration object, which will contain all DB related property details pulled from either hibernate.cfg.xml file or hibernate.properties file. SessionFactory is a factory for Session objects.
 
-Session -
+Session - Unlike SessionFactory, the Session object will be created on demand. Session is a lightweight object. Session provides a physical connectivity between your application and database. The Session will be established each time your application wants do something with database. Session object will be provided by SessionFactory object. All the persistent objects will be saved and retrieved through Session object. The session object must be destroyed after using it.
 
 ### Annotation
 
-@Entity - 
+@Entity - a class which should be persisted in a database it must be annotated with javax.persistence.Entity. Such a class is called Entity. JPA uses a database table for every entity. Persisted instances of the class will be represented as one row in the table.
+All entity classes must define a primary key, must have a non-arg constructor and or not allowed to be final. Keys can be a single field or a combination of fields.
 
-@Table - 
+@Table - with this annotation, we tell Hibernate which table to map this class to. The @Table annotation has various attributes with which we can specify the table name, directory, database, and the uniqueness of the columns in the database table.
 
-@Column - 
+@Column - the @Column annotation defines which column in the database table a particular class field belongs to (class attribute).
 
-@Id - 
+@Id - with the @Id annotation, we indicate the Primary Key of this class.
 
-@GeneratedValue -
+@GeneratedValue - this annotation is used in conjunction with the @Id annotation and defines parameters such as strategy and generator.
 
 #### strategy
 
-- GenerationType.AUTO - 
+- GenerationType.AUTO - during a commit the AUTO strategy uses the global number generator to generate a primary key for every new entity object. These generated values are unique at the database level and are never recycled 
 
-- GenerationType.IDENTITY - 
+- GenerationType.IDENTITY - the IDENTITY strategy also generates an automatic value during commit for every new entity object. The difference is that a separate identity generator is managed per type hierarchy, so generated values are unique only per type hierarchy.
+The same number generator is also used to generate numeric values for primary key fields annotated by @GeneratedValue with the AUTO strategy
 
-- GenerationType.SEQUENCE - 
+- GenerationType.SEQUENCE  - unlike AUTO and IDENTITY, the SEQUENCE strategy generates an automatic value as soon as a new entity object is persisted (i.e. before commit). This may be useful when the primary key value is needed earlier. To minimize round trips to the database server, IDs are allocated in groups. The number of IDs in each allocation is specified by the allocationSize attribute. It is possible that some of the IDs in a given allocation will not be used. Therefore, this strategy does not guarantee there will be no gaps in sequence values.
 
-- GenerationType.TABLE - 
+- GenerationType.TABLE - the GenerationType.TABLE gets only rarely used nowadays. It simulates a sequence by storing and updating its current value in a database table which requires the use of pessimistic locks which put all transactions into a sequential order. This slows down your application, and you should, therefore, prefer the GenerationType.SEQUENCE, if your database supports sequences, which most popular databases do.
+
+@OneToOne - 
+
+#### cascade
+
+- CascadeType.ALL - 
+
+- CascadeType.DETACH - 
+
+- CascadeType.MERGE - 
+
+- CascadeType.PERSIST - 
+
+- CascadeType.REMOVE - 
+
+- CascadeType.REFRESH - 
+
+@JoinColumn - 
+ 
 
