@@ -92,6 +92,10 @@ The same number generator is also used to generate numeric values for primary ke
 
 @OneToOne - 
 
+- Uni-directional - 
+
+- Bi-directional - 
+
 #### cascade
 
 - CascadeType.ALL - 
