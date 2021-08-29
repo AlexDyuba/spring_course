@@ -20,6 +20,11 @@ public class Details {
     @Column(name = "email")
     private String email;
 
+    @OneToOne(mappedBy = "employeeDetails",
+            cascade = CascadeType.ALL) // support with this command we say look connection
+    // in field employeeDetails. This field contain in Employee class
+    private Employee employee;
+
     public Details(String city, String number, String email) {
         this.city = city;
         this.number = number;
@@ -60,6 +65,10 @@ public class Details {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     @Override
