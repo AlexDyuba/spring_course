@@ -1,4 +1,4 @@
-package com.alexDyuba.spring.hibernate.connections;
+package com.alexDyuba.spring.hibernate.connections.one_to_one;
 
 import com.alexDyuba.spring.hibernate.connections.entity.Details;
 import com.alexDyuba.spring.hibernate.connections.entity.Employee;
