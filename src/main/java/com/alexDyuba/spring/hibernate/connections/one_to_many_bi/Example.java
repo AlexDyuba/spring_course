@@ -17,15 +17,20 @@ public class Example {
             Session session = sessionFactory.getCurrentSession();
             session.beginTransaction();
 
-            Employee employee1 = new Employee("Alex", "Dyuba", 2500);
-            Employee employee2 = new Employee("Oleg", "Dusho", 1110);
+//            Employee employee1 = new Employee("Alex", "Dyuba", 2500);
+//            Employee employee2 = new Employee("Oleg", "Dusho", 1110);
+//
+//            Department department = new Department("IT", 1000, 4000);
+//
+//            department.addEmployeesToDepartment(employee1);
+//            department.addEmployeesToDepartment(employee2);
 
-            Department department = new Department("IT", 1000, 4000);
+            Department department = session.get(Department.class, 1);
+            System.out.println(department.getEmps());
 
-            department.addEmployeesToDepartment(employee1);
-            department.addEmployeesToDepartment(employee2);
 
-            session.save(department);
+
+            session.delete(department);
             session.getTransaction().commit();
         }
     }
