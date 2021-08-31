@@ -15,14 +15,24 @@ public class Example {
                 .buildSessionFactory()) {
             Session session = sessionFactory.getCurrentSession();
 
-            Section section = new Section("Judo");
-            Children children1 = new Children("Alex", 8);
-            Children children2 = new Children("Vano", 9);
-            Children children3 = new Children("Arti", 7);
-            section.addChildToSection(children1, children2, children3);
+//            Section section = new Section("Judo");
+//            Children children1 = new Children("Alex", 8);
+//            Children children2 = new Children("Vano", 9);
+//            Children children3 = new Children("Arti", 7);
+//            section.addChildToSection(children1, children2, children3);
+//
+//            session.beginTransaction();
+//            session.save(section);
+//********************************************************
+            Section section = new Section("Chess");
+            Section section1 = new Section("Math");
+            Section section2 = new Section("Basket");
+            Children children1 = new Children("Oleg", 12);
 
+            children1.addSectionToChild(section, section1, section2);
+//********************************************************
             session.beginTransaction();
-            session.save(section);
+            session.save(children1);
 
             session.getTransaction().commit();
         }
