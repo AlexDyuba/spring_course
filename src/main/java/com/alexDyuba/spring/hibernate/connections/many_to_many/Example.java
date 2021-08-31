@@ -24,15 +24,19 @@ public class Example {
 //            session.beginTransaction();
 //            session.save(section);
 //********************************************************
-            Section section = new Section("Chess");
-            Section section1 = new Section("Math");
-            Section section2 = new Section("Basket");
-            Children children1 = new Children("Oleg", 12);
-
-            children1.addSectionToChild(section, section1, section2);
+//            Section section = new Section("Chess");
+//            Section section1 = new Section("Math");
+//            Section section2 = new Section("Basket");
+//            Children children1 = new Children("Oleg", 12);
+//
+//            children1.addSectionToChild(section, section1, section2);
 //********************************************************
             session.beginTransaction();
-            session.save(children1);
+
+            Section section = session.get(Section.class, 2);
+            System.out.println(section.getChildren());
+            Children children = session.get(Children.class, 7);
+            System.out.println(children.getSections());
 
             session.getTransaction().commit();
         }
