@@ -17,6 +17,14 @@ public class Section {
     @Column(name = "name")
     private String name;
 
+    public List<Children> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Children> children) {
+        this.children = children;
+    }
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "child_section",

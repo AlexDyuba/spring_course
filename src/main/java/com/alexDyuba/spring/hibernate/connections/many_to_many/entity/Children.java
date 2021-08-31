@@ -26,6 +26,7 @@ public class Children {
             joinColumns = @JoinColumn(name = "child_id"),
             inverseJoinColumns = @JoinColumn(name = "section_id")
     )
+
     private List<Section> sections;
 
     public void addSectionToChild(Section ... section) {
