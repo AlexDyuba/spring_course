@@ -25,7 +25,8 @@ public class Section {
         this.children = children;
     }
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = {CascadeType.REFRESH, CascadeType.PERSIST,
+            CascadeType.MERGE, CascadeType.DETACH})
     @JoinTable(
             name = "child_section",
             joinColumns = @JoinColumn(name = "section_id"),
