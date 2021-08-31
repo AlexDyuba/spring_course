@@ -117,5 +117,11 @@ The same number generator is also used to generate numeric values for primary ke
 - CascadeType.REFRESH - 
 
 @JoinColumn - 
+
+### Loading Types
+
+- Eager - 
+
+- Lazy - 
  
 
